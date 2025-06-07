@@ -119,13 +119,15 @@ You can choose the model interactively when starting a chat, or predefine it usi
 ## 📁 Project Structure
 ```
 cmd/
+├── api.go                # Api Logic
 ├── chat.go               # Chat command & interaction
 ├── chat_handler.go       # Chat loop logic
-├── storage.go            # Chat persistence (save/load/delete)
 ├── list_chats.go         # List command
-├── root.go               # CLI root setup
+├── listmodels.go         # List All Local Models
 ├── model_picker.go       # Model selection logic
-├── types.go       # Message and Session struct definitions
+├── root.go               # CLI root setup
+├── storage.go            # Chat persistence (save/load/delete)
+├── types.go              # Message and Session struct definitions
 ```             
 
 ## ❓ FAQ
