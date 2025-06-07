@@ -31,24 +31,32 @@ Available for: Windows, macOS (Intel & ARM), Linux
 
 Go to the Releases directory and download the binary for your OS:
 
+
 > OS Files
 - Windows	     `ollama-cli_windows_amd64.exe`
 - macOS	`ollama-cli_darwin_amd64 or ollama-cli_darwin_arm64`
 - Linux	`ollama-cli_linux_amd64`
+
+#### For macOS 
+- ollama-cli_darwin_amd64 (Intel)
+- ollama-cli_darwin_arm64 (Apple Silicon: M1, M2, M3)
 
 After downloading:
 
 Before running the cli make sure the ollama is running.
 ```
 # (macOS/Linux)
-chmod +x ollama-cli
-./ollama-cli
+chmod +x ollama-cli_darwin_amd64 or ollama_cli_darwin_arm64 
+or ollama-cli_linux_amd64
+
+./ollama-cli_darwin_amd64 or ./ollama_cli_darwin_arm64 
+or ./ollama_cli_linux_amd64
 ```
 
 ```
 # (Windows)
 Open cmd and navigate to Directory where the .exe is.
-.\ollama-cli.exe
+.\ollama-cli_windows_amd64.exe
 ```
 > **⚙️ Option 2: Build from Source** 
 
