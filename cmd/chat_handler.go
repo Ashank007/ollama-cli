@@ -24,6 +24,19 @@ func ChatLoop(session ChatSession) {
             break
         }
 
+				if strings.HasPrefix(input, "search:") {
+				query := strings.TrimSpace(strings.TrimPrefix(input, "search:"))
+				fmt.Println("🌐 Searching for:", query)
+				results, err := SearchWeb(query)
+				if err != nil {
+					fmt.Println("❌", err)
+					continue
+				}
+				fmt.Println("🔍 Top Results:\n", results)
+				input = "Here's some information I found:\n" + results
+			}
+
+
         history = append(history, Message{Role: "user", Content: input})
 
         reply, err := SendChatRequest(session.Model, history)
