@@ -145,12 +145,15 @@ cmd/
 ├── api.go                # Api Logic
 ├── chat.go               # Chat command & interaction
 ├── chat_handler.go       # Chat loop logic
+├── config.go             # Save the SERP Api key
 ├── list_chats.go         # List command
 ├── listmodels.go         # List All Local Models
 ├── model_picker.go       # Model selection logic
 ├── root.go               # CLI root setup
+├── setkey.go             # Setting Key Logic Here
 ├── storage.go            # Chat persistence (save/load/delete)
 ├── types.go              # Message and Session struct definitions
+├── websearch.go          # Web Search Logic
 ```             
 
 ## ❓ FAQ
