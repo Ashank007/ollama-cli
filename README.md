@@ -5,7 +5,7 @@
 > ![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)
 > ![Build](https://img.shields.io/badge/build-passing-success?style=flat-square)
 
-
+> ![Search Enabled](https://img.shields.io/badge/Search-Enabled-green?style=flat-square&logo=google)
 
 
 > A clean, minimal **CLI application** to interact with local Ollama models — featuring session management, chat persistence, and resume functionality.
@@ -20,9 +20,8 @@
 - 📜 **View Past Chat Messages** before resuming sessions.
 - ✅ Fully persistent and local – **no cloud or external API** dependency.
 - 🧪 Built with `cobra` for a user-friendly CLI experience.
+- 🌐 **Internet-augmented responses** using SerpAPI for real-time search within chats
 - 🧠 Supports **streamed response generation** via `Ollama` API.
-
-
 
 ## 📦 Installation
 > **🔨 Option 1: Download Prebuilt Binaries (Recommended)**
@@ -103,11 +102,35 @@ List saved chats:
 - Filenames include session name and timestamp.
 - All history is preserved in JSON format.
 
+## 🔍 Usage
+
+To search within a chat, type:
+
+```
+search: What is the latest update on NVIDIA GPUs?
+```
+The CLI will:
+- Fetch top search results from SerpAPI
+- Display the result in your chat
+- Automatically append it into the context
+
+#### 🔐 Set Your API Key
+You can set your SerpAPI key in this way:
+```
+./ollama-cli set-key keyhere
+```
+#### How to get API Key?
+
+-  Go to https://serpapi.com and Register or Sign in
+-  Go to Api Key Section
+-  Copy the Private API Key and Done.
+
 ## 💬 Commands Overview
 Command	Description
 ``` bash
 chat	Start, resume, or delete chat sessions
 list	View all saved chat sessions
+set-key Set your SerpAPI key
 ```
 ## 🔧 Configuration
 
